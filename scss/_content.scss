@@ -1,6 +1,7 @@
 .container {
     min-width: 310px;
-    width: 70vw;
+    width: 60vw;
+    max-width: 768px;
     padding: 1rem;
     border: 1px solid darken($color: #fff, $amount: 20);
     border-radius: 10px;
@@ -30,11 +31,13 @@
 }
 
 .text-container {
-    border: 1px solid #000;
+    border: 1px solid darken($color: #fff, $amount: 10);
+    border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -50,6 +53,17 @@
             font-size: 2rem;
         }
     }
+
+    &__category {
+        // display: none;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        font-weight: 100;
+        border: 1px solid darken($color: #fff, $amount: 10);
+        border-radius: 10px;
+    }
 }
 
 .buttons-container {
@@ -57,6 +71,7 @@
     button {
         display: block;
         min-width: 50px;
+        min-height: 30px;
         font-size: 1.2rem;
         height: 30px;
         padding: 0.2rem;
