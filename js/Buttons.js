@@ -1,6 +1,7 @@
 class Buttons {
-    constructor(buttons) {
+    constructor(buttons, reset) {
         this.buttons = buttons;
+        this.reset = reset;
         this.letter = "";
     }
 
@@ -11,6 +12,8 @@ class Buttons {
             button.addEventListener('click', this.pressButton);
             this.buttons.appendChild(button);
         }
+
+        this.reset.addEventListener('click', this.pressReset);
     }
 
     pressButton() {
