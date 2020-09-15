@@ -51,3 +51,33 @@
         }
     }
 }
+
+.buttons-container {
+
+    button {
+        display: block;
+        min-width: 50px;
+        font-size: 1.2rem;
+        height: 30px;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        cursor: pointer;
+    }
+
+    .buttons-text, 
+    .button-reset {
+        margin: 1.2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .buttons-text {
+        // display: none;
+    }
+
+    .button-reset {
+        // display: none;
+    }
+}
