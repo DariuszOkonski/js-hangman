@@ -1,12 +1,15 @@
 import Buttons from './Buttons.js';
+import Quote from './Quote.js';
 
 class Game {
     constructor(domElements) {
+        this.quote = new Quote(domElements.spanText, domElements.spanCategory);
         this.buttons = new Buttons(domElements.buttonsText, domElements.buttonReset);
     }
 
     start() {
         this.buttons.createButtons();
+        this.quote.createQuote();
     }
 }
 
