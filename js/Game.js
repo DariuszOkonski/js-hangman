@@ -4,7 +4,7 @@ import Quote from './Quote.js';
 class Game {
     constructor(domElements) {
         this.quote = new Quote(domElements.spanText, domElements.spanCategory);
-        this.buttons = new Buttons(domElements.buttonsText, domElements.buttonReset);
+        this.buttons = new Buttons(domElements.buttonsText, domElements.buttonReset, this.quote);
     }
 
     start() {

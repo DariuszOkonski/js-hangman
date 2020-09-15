@@ -1,8 +1,9 @@
 class Buttons {
-    constructor(buttons, reset) {
+    constructor(buttons, reset, quote) {
         this.buttons = buttons;
         this.reset = reset;
         this.letter = "";
+        this.quote = quote;
     }
 
     createButtons() {
@@ -17,9 +18,10 @@ class Buttons {
     }
 
     pressButton() {
-        this.disabled = true;
-        this.letter = this.innerText;
-        console.log(this.letter);
+        // this.disabled = true;
+        // this.letter = this.innerText;
+        // console.log(this.letter);
+        console.log(this)
     }
 
     pressReset() {

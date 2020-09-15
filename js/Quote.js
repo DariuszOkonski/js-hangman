@@ -16,6 +16,10 @@ class Quote {
         this.spanText.innerText = this.text.content;
         this.spanCategory.innerText = this.text.category;
     }
+
+    checkQuote(letter) {
+        console.log('check quote: ' + letter);
+    }
 }
 
 export default Quote;

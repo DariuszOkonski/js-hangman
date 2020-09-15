@@ -8,6 +8,6 @@ const domElements = {
 }
 
 const game = new Game(domElements);
-console.log(game);
+// console.log(game);
 
 game.start();
