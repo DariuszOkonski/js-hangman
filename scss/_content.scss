@@ -1,9 +1,30 @@
 .container {
     min-width: 310px;
-    width: 50vw;
+    width: 70vw;
     padding: 1rem;
-    border: 1px solid #000;
+    border: 1px solid darken($color: #fff, $amount: 20);
     border-radius: 10px;
 
-    background-color: darken($color: #fff, $amount: 5);
+    background-color: darken($color: #fff, $amount: 2);
+}
+
+.images-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    .img {
+        width: 250px;
+        margin: 0.5rem;
+
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+
+        &:first-child img {
+            opacity: 1;
+        }
+    }
 }
