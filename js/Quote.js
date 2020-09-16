@@ -4,6 +4,8 @@ const quotes = [
     {id: 3, content: 'janko muzykant', category: 'utwór literacki' },
 ]
 
+const gameEnd = 7;
+
 class Quote {
     constructor(spanText, spanCategory, imagesContainer) {
         this.spanText = spanText;
@@ -55,6 +57,12 @@ class Quote {
 
     changeImage(counter) {
         this.imagesContainer.children[counter].classList.add('show');
+    }
+
+    checkEndGame() {
+        if(this.counter === gameEnd) {
+            console.log("End game");
+        }
     }
 }
 

@@ -25,6 +25,7 @@ class Buttons {
         this.letter = e.target.innerText;
         let foundLetter = this.quote.checkQuote(this.letter);
         this.quote.checkCounter(foundLetter);
+        this.quote.checkEndGame();
     }
 
     pressReset() {
