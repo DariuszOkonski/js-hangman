@@ -9,17 +9,42 @@ class Quote {
         this.spanText = spanText;
         this.spanCategory = spanCategory;
         this.text = quotes[Math.floor(Math.random() * quotes.length)];
+        this.hiddenText = "";
+        this.counter = 0;
     }
 
     createQuote() {
-        // console.log('render quote');
-        this.spanText.innerText = this.text.content;
+        console.log('render quote');
+        this.spanText.innerText = this.hideQuote();
         this.spanCategory.innerText = this.text.category;
     }
 
+    hideQuote() {        
+        for (let i = 0; i < this.text.content.length; i++) {
+            if(this.text.content[i] !== " ") {
+                this.hiddenText += "_";
+            } else {
+                this.hiddenText += " ";
+            }
+        }       
+        return this.hiddenText;
+    }
+
     checkQuote(letter) {
-        console.log('hello world')
-        console.log('check quote: ' + letter);
+        let hiddenArray = this.hiddenText.split("");
+        this.counter++;
+
+        for (let i = 0; i < this.text.content.length; i++) {
+            if(this.text.content[i] === letter) {
+                hiddenArray[i] = letter;
+                this.counter--;
+            }          
+        }
+
+        console.log(this.counter);
+
+        this.hiddenText = hiddenArray.join("");
+        this.spanText.innerText = this.hiddenText;
     }
 }
 
