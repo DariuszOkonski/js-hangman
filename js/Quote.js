@@ -12,12 +12,13 @@ class Quote {
     }
 
     createQuote() {
-        console.log('render quote');
+        // console.log('render quote');
         this.spanText.innerText = this.text.content;
         this.spanCategory.innerText = this.text.category;
     }
 
     checkQuote(letter) {
+        console.log('hello world')
         console.log('check quote: ' + letter);
     }
 }
