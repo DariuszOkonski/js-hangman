@@ -5,16 +5,17 @@ const quotes = [
 ]
 
 class Quote {
-    constructor(spanText, spanCategory) {
+    constructor(spanText, spanCategory, imagesContainer) {
         this.spanText = spanText;
         this.spanCategory = spanCategory;
+        this.imagesContainer = imagesContainer;
         this.text = quotes[Math.floor(Math.random() * quotes.length)];
         this.hiddenText = "";
         this.counter = 0;
     }
 
     createQuote() {
-        console.log('render quote');
+        // console.log('render quote');
         this.spanText.innerText = this.hideQuote();
         this.spanCategory.innerText = this.text.category;
     }
@@ -32,19 +33,28 @@ class Quote {
 
     checkQuote(letter) {
         let hiddenArray = this.hiddenText.split("");
-        this.counter++;
+        let foundLetter = false;
 
         for (let i = 0; i < this.text.content.length; i++) {
             if(this.text.content[i] === letter) {
                 hiddenArray[i] = letter;
-                this.counter--;
+                foundLetter = true;
             }          
         }
-
-        console.log(this.counter);
-
         this.hiddenText = hiddenArray.join("");
         this.spanText.innerText = this.hiddenText;
+        return foundLetter;
+    }
+
+    checkCounter(isIncreased) {
+        if(!isIncreased) {
+            this.counter++;
+            this.changeImage(this.counter);
+        } 
+    }
+
+    changeImage(counter) {
+        this.imagesContainer.children[counter].classList.add('show');
     }
 }
 

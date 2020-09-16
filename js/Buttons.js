@@ -23,7 +23,8 @@ class Buttons {
     pressButton(e) {
         e.target.disabled = true;
         this.letter = e.target.innerText;
-        this.quote.checkQuote(this.letter);
+        let foundLetter = this.quote.checkQuote(this.letter);
+        this.quote.checkCounter(foundLetter);
     }
 
     pressReset() {

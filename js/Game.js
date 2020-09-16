@@ -3,7 +3,7 @@ import Quote from './Quote.js';
 
 class Game {
     constructor(domElements) {
-        this.quote = new Quote(domElements.spanText, domElements.spanCategory);
+        this.quote = new Quote(domElements.spanText, domElements.spanCategory, domElements.imagesContainer);
         this.buttons = new Buttons(domElements.buttonsText, domElements.buttonReset, this.quote);
     }
 

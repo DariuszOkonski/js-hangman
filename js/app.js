@@ -5,6 +5,7 @@ const domElements = {
     buttonReset: document.querySelector('[data-button-reset]'),
     spanText: document.querySelector('[data-text-content]'),
     spanCategory: document.querySelector('[data-text-category]'),
+    imagesContainer: document.querySelector('[data-images-container]')
 }
 
 const game = new Game(domElements);

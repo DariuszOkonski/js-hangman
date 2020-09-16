@@ -18,15 +18,20 @@
     .img {
         width: 250px;
         margin: 0.5rem;
+        opacity: 0.4;
 
         img {
             width: 100%;
-            opacity: 0.4;
+            // opacity: 0.4;
         }
 
-        &:first-child img {
-            opacity: 1;
-        }
+        // &:first-child img {
+        //     // opacity: 1;
+        // }
+    }
+
+    .show {
+        opacity: 1;
     }
 }
 
