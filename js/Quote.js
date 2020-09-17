@@ -68,11 +68,21 @@ class Quote {
 
         if(this.counter === gameEnd) {
             console.log("LOST GAME");
+            this.loseGame();
         }
     }
 
     winGame() {
-        this.spanCategory.innerText = "Congratulation, You Win the Game!!!";
+        this.spanCategory.style.color = "green";
+        this.spanCategory.style.fontSize = "1.8rem";
+        this.spanCategory.innerText = "Congratulation!!!\nYou Win the Game!!!";
+        this.hideTextButtons();
+    }
+
+    loseGame() {
+        this.spanCategory.style.color = "red";
+        this.spanCategory.style.fontSize = "1.8rem";
+        this.spanCategory.innerText = `You Lost!!!\nAnswer: ${this.text.content}`;
         this.hideTextButtons();
     }
 
