@@ -1,0 +1,36 @@
+const quotes = [
+    {id: 1, content: 'tenet', category: 'movie' },
+    {id: 2, content: 'unhinged', category: 'movie' },
+    {id: 3, content: 'the new mutants', category: 'movie' },
+    {id: 4, content: 'words on bathroom walls', category: 'movie' },
+    {id: 5, content: 'cut throat city', category: 'movie' },
+    {id: 6, content: 'star wars', category: 'movie' },
+    {id: 7, content: 'bad boys for life', category: 'movie' },
+    {id: 8, content: 'black panther', category: 'movie' },
+    {id: 9, content: 'jumanji', category: 'movie' },
+    {id: 10, content: 'joker', category: 'movie' },
+    {id: 11, content: 'a bad workman always blames his tools', category: 'proverb' },
+    {id: 12, content: 'a bird in hand is worth two in the bush', category: 'proverb' },
+    {id: 13, content: 'absence makes the heart grow fonder', category: 'proverb' },
+    {id: 14, content: 'a cat has nine lives', category: 'proverb' },
+    {id: 15, content: 'better late than never', category: 'proverb' },
+    {id: 16, content: 'better to wear out than to rust out', category: 'proverb' },
+    {id: 17, content: 'early bird catches the worm', category: 'proverb' },
+    {id: 18, content: 'every cloud has a silver lining', category: 'proverb' },
+    {id: 19, content: 'good things come to those who wait', category: 'proverb' },
+    {id: 20, content: 'half a loaf is better than none', category: 'proverb' },
+    {id: 21, content: 'big sky', category: 'book' },
+    {id: 22, content: 'sweet sorrow', category: 'book' },
+    {id: 23, content: 'machines like me', category: 'book' },
+    {id: 24, content: 'normal people', category: 'book' },
+    {id: 25, content: 'the silent patient', category: 'book' },
+    {id: 26, content: 'the sleepwalker', category: 'book' },
+    {id: 27, content: 'no way out', category: 'book' },
+    {id: 28, content: 'the garden of lost and found', category: 'book' },
+    {id: 29, content: 'after the end', category: 'book' },
+    {id: 30, content: 'queenie', category: 'book' },
+]
+
+export function getQuote() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}

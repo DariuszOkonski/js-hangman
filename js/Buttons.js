@@ -10,7 +10,6 @@ class Buttons {
         for (let i = 0; i < 26; i++) {
             const button = document.createElement('button')
             button.innerText = String.fromCharCode(i + 97);
-            // button.addEventListener('click', this.pressButton);
             button.addEventListener('click', (e) => this.pressButton(e));
             this.buttons.appendChild(button);
         }
@@ -18,8 +17,6 @@ class Buttons {
         this.reset.addEventListener('click', this.pressReset);
     }
 
-    // e.target - reference to button
-    // this - reference to object Buttons
     pressButton(e) {
         e.target.disabled = true;
         this.letter = e.target.innerText;

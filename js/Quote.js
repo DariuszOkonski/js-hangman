@@ -1,8 +1,4 @@
-const quotes = [
-    {id: 1, content: 'ogniem i mieczem', category: 'film' },
-    {id: 2, content: 'komu w droge temu czas', category: 'przysłowie' },
-    {id: 3, content: 'janko muzykant', category: 'utwór literacki' },
-]
+import { getQuote } from './quotes.js';
 
 const gameEnd = 7;
 
@@ -12,7 +8,7 @@ class Quote {
         this.spanCategory = spanCategory;
         this.btnText = btnText;
         this.imagesContainer = imagesContainer;
-        this.text = quotes[Math.floor(Math.random() * quotes.length)];
+        this.text = getQuote();
         this.hiddenText = "";
         this.counter = 0;
     }

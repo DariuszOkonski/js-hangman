@@ -9,6 +9,5 @@ const domElements = {
 }
 
 const game = new Game(domElements);
-// console.log(game);
 
 game.start();
