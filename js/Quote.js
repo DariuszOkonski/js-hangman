@@ -1,15 +1,16 @@
 const quotes = [
     {id: 1, content: 'ogniem i mieczem', category: 'film' },
-    {id: 2, content: 'komu w drogę temu czas', category: 'przysłowie' },
+    {id: 2, content: 'komu w droge temu czas', category: 'przysłowie' },
     {id: 3, content: 'janko muzykant', category: 'utwór literacki' },
 ]
 
 const gameEnd = 7;
 
 class Quote {
-    constructor(spanText, spanCategory, imagesContainer) {
+    constructor(spanText, spanCategory, imagesContainer, btnText) {
         this.spanText = spanText;
         this.spanCategory = spanCategory;
+        this.btnText = btnText;
         this.imagesContainer = imagesContainer;
         this.text = quotes[Math.floor(Math.random() * quotes.length)];
         this.hiddenText = "";
@@ -60,9 +61,24 @@ class Quote {
     }
 
     checkEndGame() {
-        if(this.counter === gameEnd) {
-            console.log("End game");
+
+        if(this.text.content === this.hiddenText) {
+            console.log("WIN GAME");
+            this.winGame();
         }
+
+        if(this.counter === gameEnd) {
+            console.log("LOST GAME");
+        }
+    }
+
+    winGame() {
+        this.spanCategory.innerText = "Congratulation, You Win the Game!!!";
+        this.hideTextButtons();
+    }
+
+    hideTextButtons() {
+        this.btnText.style.display = "none";
     }
 }
 
