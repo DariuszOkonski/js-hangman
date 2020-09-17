@@ -61,7 +61,6 @@
     }
 
     &__category {
-        // display: none;
         font-size: 1rem;
         margin-top: 1.2rem;
         padding: 0.5rem;
@@ -92,13 +91,5 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }
-    
-    .buttons-text {
-        // display: none;
-    }
-
-    .button-reset {
-        // display: none;
     }
 }

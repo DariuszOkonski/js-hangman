@@ -18,7 +18,6 @@ class Quote {
     }
 
     createQuote() {
-        // console.log('render quote');
         this.spanText.innerText = this.hideQuote();
         this.spanCategory.innerText = this.text.category;
     }
